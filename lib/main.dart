@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Login(),
+      home: Scaffold(
+        backgroundColor: Color.fromRGBO(60, 189, 212, 0.612),
+        body: Login(),
+      ),
     );
   }
 }

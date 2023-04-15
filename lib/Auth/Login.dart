@@ -4,7 +4,7 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hackathon_app/Auth/signup.dart';
-import 'package:hackathon_app/Home.dart';
+import 'package:hackathon_app/Navigation/Home.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});

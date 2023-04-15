@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hackathon_app/Profile.dart';
-import 'package:hackathon_app/Search.dart';
+import 'package:hackathon_app/Navigation/Profile.dart';
+import 'package:hackathon_app/Navigation/Search.dart';
+import 'package:hackathon_app/Navigation/feed.dart';
 import 'package:hackathon_app/Settings/settings.dart';
-import 'package:hackathon_app/feed.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

@@ -15,35 +15,43 @@ class _About_pageState extends State<About_page> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      body: Container(
-        child: Column(
-          children: [
-            Container(
-              child: Padding(
-                padding: const EdgeInsets.only(top: 40),
-                child: Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 16, right: 16),
-                      child: InkWell(
-                          onTap: () {
-                            Get.back();
-                          },
-                          child: Icon(Icons.arrow_back)),
+      body: SingleChildScrollView(
+        child: SafeArea(
+          child: Container(
+            child: Column(
+              children: [
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.only(top: 40),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, right: 16),
+                          child: InkWell(
+                            onTap: () {
+                              Get.back();
+                            },
+                            child: new Icon(
+                              Icons.arrow_back,
+                              size: 30.0,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16),
+                          child: Text(
+                            "About App",
+                            style: GoogleFonts.acme(
+                                fontSize: 20, fontWeight: FontWeight.w100),
+                          ),
+                        ),
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16),
-                      child: Text(
-                        "About App",
-                        style: GoogleFonts.acme(
-                            fontSize: 20, fontWeight: FontWeight.w100),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-              ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );

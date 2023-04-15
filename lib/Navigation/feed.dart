@@ -14,7 +14,7 @@ class Feed extends StatelessWidget {
       ),
       body: Container(
           child: Center(
-        child: Text('HomePAge'),
+        child: Text('HomePage'),
       )),
     );
   }

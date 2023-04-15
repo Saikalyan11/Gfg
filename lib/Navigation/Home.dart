@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hackathon_app/Navigation/Profile.dart';
-import 'package:hackathon_app/Navigation/Search.dart';
 import 'package:hackathon_app/Navigation/feed.dart';
 import 'package:hackathon_app/Settings/settings.dart';
 
@@ -14,8 +13,7 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   List Pages = [
     Feed(),
-    SearchPage(),
-    Profile(),
+    ProfilePage(),
     Settingspage(),
   ];
   int currentIndex = 0;
@@ -43,10 +41,6 @@ class _HomeState extends State<Home> {
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
                 label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                label: 'Search',
               ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),

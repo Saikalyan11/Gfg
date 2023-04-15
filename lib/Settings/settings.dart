@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +33,7 @@ class _SettingspageState extends State<Settingspage> {
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.only(left: 16),
+                          padding: const EdgeInsets.only(left: 20),
                           child: Text(
                             'Settings',
                             style: GoogleFonts.acme(
@@ -52,9 +53,9 @@ class _SettingspageState extends State<Settingspage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(left: 16, right: 16),
+                        padding: const EdgeInsets.only(left: 26, right: 16),
                         child: Text(
-                          "Dark Theme",
+                          'Dark Theme',
                           style: GoogleFonts.acme(fontSize: 20),
                         ),
                       ),
@@ -84,8 +85,8 @@ class _SettingspageState extends State<Settingspage> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 16, right: 16),
-                            child: Text("About App",
+                            padding: const EdgeInsets.only(left: 26, right: 16),
+                            child: Text('About App',
                                 style: GoogleFonts.acme(fontSize: 20)),
                           ),
                         ],
@@ -95,13 +96,24 @@ class _SettingspageState extends State<Settingspage> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 40),
-                  child: OutlinedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Sign Out',
-                      style: GoogleFonts.acme(
-                        fontSize: 20,
-                        color: Color.fromARGB(255, 185, 118, 47),
+                  child: InkWell(
+                    onTap: () async {
+                      await FirebaseAuth.instance.signOut();
+                    },
+                    child: Container(
+                      height: 40,
+                      width: 90,
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1, color: Colors.grey),
+                          borderRadius: BorderRadius.circular(12)),
+                      child: Center(
+                        child: Text(
+                          'Sign Out',
+                          style: GoogleFonts.acme(
+                            fontSize: 20,
+                            color: Color.fromARGB(255, 185, 118, 47),
+                          ),
+                        ),
                       ),
                     ),
                   ),
